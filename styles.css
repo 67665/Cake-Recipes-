@@ -1,0 +1,185 @@
+#kod css
+body {
+  background-color: #E6E6FA;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+h1 {
+  color: #fc4879;
+  font-size: 42px;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+}
+
+form {
+  background-color: #fee4ea;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px 0;
+  display: inline-block;
+  animation: form-load 1s ease-in-out;
+
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  margin: 10px 0px;
+}
+
+@keyframes form-load {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="submit"] {
+  width: 28%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px 5px 5px 5px;
+  border: none;
+  background-color: #ff69b4;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+
+@keyframes submit-btn-load {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px 5px 5px 5px;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+h2 {
+  color: #fc4879;
+  font-size: 36px;
+  margin: 50px 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fc4879;
+  font-size: 24px;
+  text-decoration: none;
+
+}
+.recipe {
+background-color: #ffb6c1;
+border-radius: 10px;
+padding: 20px;
+margin: 50px 50px;
+width: auto;
+text-align: left;
+animation: recipe-3d 1s ease-in-out;
+}
+
+@keyframes recipe-3d {
+0% {
+transform: rotateX(90deg);
+opacity: 0;
+}
+100% {
+transform: rotateX(0);
+opacity: 1;
+}
+}
+
+
+
+h3 {
+  color: #fc4879;
+  font-size: 30px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+p {
+  color: #fc4879;
+  font-size: 20px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+#link {
+  color: #fc4879;
+  font-size: 24px;
+  color: #2e2e2e;
+  margin: 10px 0;
+
+}
+
+#image {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+
+}
+
+#ingredients {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+#content {
+  font-size: 18px;
+  margin: 20px 0;
+}
