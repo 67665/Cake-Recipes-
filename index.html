@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+<h1>Recipe Finder</h1>
+
+<form action="/search" method="get">
+    <input type="text" name="ingredients" placeholder="Search Recipes by Ingredients" value="{{ ingredients }}">
+    <input type="submit" value="Search">
+</form>
+<p>
+{% if search %}
+Liczba znalezionych przepisów: {{ przepisy | length }}
+{% endif %}
+</p>
+
+<!--<h2>Categories</h2>-->
+<!--<ul>-->
+<!--    <li><a href="#title">Title</a></li>-->
+<!--    <li><a href="#link">Link</a></li>-->
+<!--    <li><a href="#image">Image</a></li>-->
+<!--    <li><a href="#ingredients">Ingredients</a></li>-->
+<!--    <li><a href="#content">Content</a></li>-->
+<!--</ul>-->
+
+<h2>Recipes</h2>
+{% for p in przepisy %}
+<div class="recipe">
+    <h3 id="title">{{ p.tytul }}</h3>
+
+    <img src="{{ p.obrazek }}" alt="recipe image" id="image" style="width: 50%">
+
+    <!--<a href="{{ p.link }}" id="link">AllRecipes.com</a> -->
+
+    <h3>Ingredients</h3>
+    <ul id="content">
+        {% for s in p.skl %}
+            <li>{{ s }}<br> <br/></li>
+        {% endfor %}
+    </ul>
+    <h3>Directions</h3>
+    <ul id="content">
+        {% for w in p.wyk %}
+            <li>{{ w }}<br> <br/></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+
+
+
+</body>
+
+</html>
